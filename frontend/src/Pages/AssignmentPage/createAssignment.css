@@ -1,0 +1,53 @@
+.text-user{
+    margin-top: 0.5rem;
+    margin-right: 5rem;
+}
+.textbox-user{
+    width: 23rem;
+    left: 2rem;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    box-sizing: border-box;
+    margin-right: -236px;
+}
+.text-asset{
+    margin-top: 0.5rem;
+    margin-right: 4.5rem;
+}
+.textbox-asset{
+    width: 22rem;
+    left: 2rem;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    box-sizing: border-box;
+    margin-right: -236px;
+}
+.text-assignedDate{
+    margin-right: 1rem;
+  }
+  .installedDate99{
+    width: 18rem;
+    left: 2rem;
+    border: 1px solid #ccc;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    margin-right: -236px;
+  }
+  .text-note{
+    margin-right: 5.4rem;
+  }
+  .textbox-note{
+    left: 2rem;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    margin-right: -236px;
+  }
+  .btn-buttom100{
+    margin-right: 2rem;
+  }
+  .textbox-type{
+    left: 1rem;
+    padding: 6px 120px;
+    margin: -4px 0px;
+    margin-right: -236px;
+  }

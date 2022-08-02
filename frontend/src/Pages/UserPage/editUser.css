@@ -1,0 +1,82 @@
+.text-firstName1{
+  margin-right: 2.7rem;
+}
+.textbox-firstName1{
+  width: 24rem;
+  left: 2rem;
+  padding: 5px 6px;
+  margin: -4px 0px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  margin-right: -236px;
+}
+.installedDate00{
+  width: 23.9rem;
+  left: 2rem;
+  padding: 5px 6px;
+  border: 1px solid #ccc;
+  margin: -4px 0px;
+  box-sizing: border-box;
+  margin-right: -236px;
+}
+.installedDate100{
+  width: 23.9rem;
+  left: 2rem;
+  padding: 5px 6px;
+  border: 1px solid #ccc;
+  margin: -4px 0px;
+  box-sizing: border-box;
+  margin-right: -236px;
+}
+.text-DOB00{
+  margin-top: 0rem;
+  top: 1rem;
+  height: 2rem;
+  margin-right: 2rem;
+  
+}
+.text-joinedDate100{
+  margin-top: 0rem;
+  top: 1rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+.checkGender100{
+  top: 10;
+  left: 10;
+  height: 50px;
+  width: 25px;
+padding: -10rem 6px;
+margin-left: 75px;
+margin-right: -26px;
+}
+.text-gender00{
+  top: 10;
+  left: 10;
+  height: 10px;
+  width: 2.2rem;
+  margin-top: 0.5rem;
+}
+.checkGender00{
+  
+  margin-left: 5.5rem;
+}
+.text-type00{
+  width: 22rem;
+  left: 2rem;
+  padding: 5px 6px;
+  margin: -4px 0px;
+  box-sizing: border-box;
+  margin-right: -234px;
+}
+.textbox-type00{
+  width: 24rem;
+  left: 2rem;
+  padding: 5px 6px;
+  margin: -4px 0px;
+  box-sizing: border-box;
+  margin-right: -234px;
+}
+.btn-buttom1100{
+  margin-right: 8rem;
+}

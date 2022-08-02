@@ -1,0 +1,162 @@
+.formBasicTitleCreateAsset2{
+    left: 4.1rem;
+    right: 1rem;
+    size: 1rem;
+    margin-left: 2rem;
+   
+    margin-right: 4.1rem;
+}
+.btn-buttom1{
+    margin-left: 0rem;
+}
+.btn-form1{
+    size: 10rem;
+}
+.textbox-assetName{
+    border: 1px solid #ccc;
+    width: 23rem;
+    left: 2rem;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    box-sizing: border-box;
+    margin-right: -236px;
+}
+.text-assetName{
+    margin-right: 2.7rem;
+}
+.textbox-specification{
+    border: 1px solid #ccc;
+    width: 23rem;
+    left: 2rem;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    box-sizing: border-box;
+    margin-right: -236px;
+}
+.text-specification{
+    margin-right: 2.4rem;
+}
+.btn-buttom6{
+    margin-top: 0rem;
+    margin-right: 6rem;
+}
+.text-assetState{
+    margin-top: 2rem;
+}
+.btn-buttom20{
+    margin-top: 0rem;
+}
+.btn-buttom21{
+    margin-top: 0rem;
+    margin-right: 6rem;
+}
+.btn-buttom22{
+    margin-top: 0rem;
+}
+.installedDate2000{
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    left: 11rem;
+    margin: -4px -236px -4px 0;
+    padding: 5px 8px;
+    width: 23.2rem;
+}
+.btn-category1{
+    left: 4.1rem;
+    right: 1rem;
+    size: 1rem;
+    margin-left: 2rem;
+    padding: 5px 3px;
+    margin-right: 4.1rem;
+}
+.btn-button1{
+    margin-left: 1.6rem;
+    background-color: #a4a8a4; 
+    border: 1px solid rgb(0, 5, 0);
+    color: white;
+    padding: 7px -1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+.btn-button2{
+    background-color: #d61515; 
+    border: 1px solid rgb(0, 5, 0);
+    color: white;
+    padding: 7px -1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: left;
+}
+.messageDelete{
+    margin-bottom: 2rem;
+}
+.text-DOB{
+    margin-right: 2rem;
+}
+.installedDate{
+    width: 7rem;
+    left: 2rem;
+    padding: 5px 6px;
+    margin: -4px 0px;
+    box-sizing: border-box;
+    margin-right: -23px;
+  }
+  .checkStatus{
+    top: 10;
+    left: 10;
+    height: 31px;
+  padding: -10rem 6px;
+  margin-left: 5.5rem;
+  margin-right: 0rem;
+  }
+  .checkStatus1{
+    top: 10;
+    left: 10;
+    height: 31px;
+  padding: -10rem 6px;
+  margin-left: -1.5rem;
+  margin-right: -174px;
+}
+.checkStatus3{
+    top: 10;
+    left: 10;
+    height: 31px;
+    padding: -10rem 6px;
+    margin-left: -4.1rem;
+    margin-right: -2em;
+}
+.checkStatus4{
+    top: 10;
+    left: 10;
+    height: 31px;
+  padding: -10rem 6px;
+  margin-left: 7.6rem;
+  margin-right: 0rem;
+}
+.checkStatus5{
+    top: 10;
+    left: 10;
+    height: 31px;
+  padding: -10rem 6px;
+  margin-left: 4rem;
+  margin-right: 0.4rem;
+
+}
+.checkStatus6{
+    top: 10;
+    left: 10;
+    height: 31px;
+  padding: -10rem 6px;
+  margin-left: -0.3rem;
+  /* margin-right: -em; */
+}
+.text-assetState{
+    margin-top: 1rem;
+}
