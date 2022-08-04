@@ -71,7 +71,7 @@ namespace backend.Services
 
             if (user.UserState == UserState.Disable) throw new AppException("This account has been disabled");
             if (model.Password.Length >= 255) throw new AppException("Password should less than 255 characters");
-            if (model.Password.Length < 8) throw new AppException("Password should have more than 8 characters");
+            //if (model.Password.Length < 8) throw new AppException("Password should have more than 8 characters");
             // validate
             if (user == null || !BCrypt.Net.BCrypt.Verify(model.Password, user.PasswordHash))
                 throw new AppException("Username or password is incorrect. Please try again");

@@ -12,8 +12,8 @@ using backend.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(MyDbContext))]
-    [Migration("20220416044956_Category.dbo")]
-    partial class Categorydbo
+    [Migration("20220804085149_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -73,10 +73,10 @@ namespace backend.Migrations
                             AssetId = 1,
                             AssetCode = "LA1",
                             AssetName = "HP Zenbook8",
-                            AssetState = 1,
+                            AssetState = 0,
                             CategoryId = 1,
                             CategoryName = "Laptop",
-                            InstalledDate = new DateTime(2022, 4, 16, 11, 49, 55, 126, DateTimeKind.Local).AddTicks(1645),
+                            InstalledDate = new DateTime(2022, 8, 4, 15, 51, 48, 258, DateTimeKind.Local).AddTicks(3349),
                             Location = "sample location",
                             Specification = "this is sample data"
                         },
@@ -85,10 +85,10 @@ namespace backend.Migrations
                             AssetId = 2,
                             AssetCode = "MO1",
                             AssetName = "Dell UltralSharp",
-                            AssetState = 1,
+                            AssetState = 0,
                             CategoryId = 2,
                             CategoryName = "Monitor",
-                            InstalledDate = new DateTime(2022, 4, 16, 11, 49, 55, 126, DateTimeKind.Local).AddTicks(1665),
+                            InstalledDate = new DateTime(2022, 8, 4, 15, 51, 48, 258, DateTimeKind.Local).AddTicks(3370),
                             Location = "sample location",
                             Specification = "this is sample data"
                         },
@@ -97,10 +97,10 @@ namespace backend.Migrations
                             AssetId = 3,
                             AssetCode = "PC1",
                             AssetName = "HP PC",
-                            AssetState = 1,
+                            AssetState = 0,
                             CategoryId = 3,
                             CategoryName = "Personal Computer",
-                            InstalledDate = new DateTime(2022, 4, 16, 11, 49, 55, 126, DateTimeKind.Local).AddTicks(1667),
+                            InstalledDate = new DateTime(2022, 8, 4, 15, 51, 48, 258, DateTimeKind.Local).AddTicks(3372),
                             Location = "sample location",
                             Specification = "this is sample data"
                         });
@@ -153,10 +153,13 @@ namespace backend.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Specification")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("AssignmentId");
 
-                    b.HasIndex("AssetId")
-                        .IsUnique();
+                    b.HasIndex("AssetId");
 
                     b.HasIndex("AssignedByUserId");
 
@@ -169,31 +172,33 @@ namespace backend.Migrations
                         {
                             AssignmentId = 2,
                             AssetCode = "MO000002",
-                            AssetId = 40,
+                            AssetId = 1,
                             AssetName = "Changed",
                             AssignedByUserId = 1,
                             AssignedByUserName = "Admin",
-                            AssignedDate = new DateTime(2022, 4, 16, 11, 49, 55, 730, DateTimeKind.Local).AddTicks(1179),
+                            AssignedDate = new DateTime(2022, 8, 4, 15, 51, 48, 818, DateTimeKind.Local).AddTicks(1067),
                             AssignedToUserId = 2,
                             AssignedToUserName = "Staff",
                             AssignmentState = 0,
                             Location = "Hanoi",
-                            Note = "seeding data"
+                            Note = "seeding data",
+                            Specification = ""
                         },
                         new
                         {
                             AssignmentId = 3,
                             AssetCode = "PC000007",
-                            AssetId = 44,
+                            AssetId = 2,
                             AssetName = "Dell Vostro3578",
                             AssignedByUserId = 1,
                             AssignedByUserName = "Admin",
-                            AssignedDate = new DateTime(2022, 4, 16, 11, 49, 55, 730, DateTimeKind.Local).AddTicks(1198),
+                            AssignedDate = new DateTime(2022, 8, 4, 15, 51, 48, 818, DateTimeKind.Local).AddTicks(1079),
                             AssignedToUserId = 2,
                             AssignedToUserName = "Staff",
                             AssignmentState = 0,
                             Location = "Hanoi",
-                            Note = "seeding data"
+                            Note = "seeding data",
+                            Specification = ""
                         });
                 });
 
@@ -235,48 +240,6 @@ namespace backend.Migrations
                             CategoryId = 3,
                             CategoryName = "Personal Computer",
                             Prefix = "PC"
-                        });
-                });
-
-            modelBuilder.Entity("backend.Entities.ReturningRequest", b =>
-                {
-                    b.Property<int>("RequestId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RequestId"), 1L, 1);
-
-                    b.Property<int>("AssignmentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProcessedByUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RequestState")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RequestedByUserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("RequestId");
-
-                    b.HasIndex("AssignmentId")
-                        .IsUnique();
-
-                    b.HasIndex("ProcessedByUserId");
-
-                    b.HasIndex("RequestedByUserId");
-
-                    b.ToTable("ReturningRequest", (string)null);
-
-                    b.HasData(
-                        new
-                        {
-                            RequestId = 1,
-                            AssignmentId = 1,
-                            ProcessedByUserId = 1,
-                            RequestState = 1,
-                            RequestedByUserId = 2
                         });
                 });
 
@@ -343,10 +306,10 @@ namespace backend.Migrations
                             FirstName = "Dao",
                             Gender = 0,
                             IsFirstLogin = true,
-                            JoinedDate = new DateTime(2022, 4, 16, 11, 49, 55, 319, DateTimeKind.Local).AddTicks(4596),
+                            JoinedDate = new DateTime(2022, 8, 4, 15, 51, 48, 454, DateTimeKind.Local).AddTicks(7071),
                             LastName = "Quy Vuong",
                             Location = 0,
-                            PasswordHash = "$2a$11$dOYGAOIvOigP1QDHmx0rlOG7QYSSFuesWAwyAAvv8FqyWVldUkM12",
+                            PasswordHash = "$2a$11$rS2i8frKNAk3x2kwtlLgv.dPhJgVDJMPc1G3JdG4C9ZGZ5VK7Vxba",
                             Role = 0,
                             StaffCode = "AD1",
                             UserName = "Admin",
@@ -359,10 +322,10 @@ namespace backend.Migrations
                             FirstName = "Bui",
                             Gender = 0,
                             IsFirstLogin = true,
-                            JoinedDate = new DateTime(2022, 4, 16, 11, 49, 55, 529, DateTimeKind.Local).AddTicks(1393),
+                            JoinedDate = new DateTime(2022, 8, 4, 15, 51, 48, 637, DateTimeKind.Local).AddTicks(1556),
                             LastName = "Chi Huong",
                             Location = 0,
-                            PasswordHash = "$2a$11$bCkTQ5/Kp2Azg/pbRLAoTO40f716MKNorK4ri26Ub97aQGHSQ/3EC",
+                            PasswordHash = "$2a$11$qo21cybs8i6hRkjAB1RFJ.PDG4xQAtAJidhsgTjwnP45X0YHOSDJS",
                             Role = 1,
                             StaffCode = "US2",
                             UserName = "Staff",
@@ -375,10 +338,10 @@ namespace backend.Migrations
                             FirstName = "Bui",
                             Gender = 1,
                             IsFirstLogin = true,
-                            JoinedDate = new DateTime(2022, 4, 16, 11, 49, 55, 730, DateTimeKind.Local).AddTicks(728),
+                            JoinedDate = new DateTime(2022, 8, 4, 15, 51, 48, 818, DateTimeKind.Local).AddTicks(624),
                             LastName = "Chi Huong",
                             Location = 1,
-                            PasswordHash = "$2a$11$qtiXwruPCkS9UlDWjNiCxOvVMkt5cHhjn8YvwNOqSnUpGHOMjG5b.",
+                            PasswordHash = "$2a$11$2H2REEseJTHYk/6OSmEEX.qlPq1lxExbCf7Impi3PUI8Wlfiri2kC",
                             Role = 1,
                             StaffCode = "........",
                             UserName = "Huong",
@@ -400,9 +363,9 @@ namespace backend.Migrations
             modelBuilder.Entity("backend.Entities.Assignment", b =>
                 {
                     b.HasOne("backend.Entities.Asset", "Asset")
-                        .WithOne()
-                        .HasForeignKey("backend.Entities.Assignment", "AssetId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .WithMany("Assignments")
+                        .HasForeignKey("AssetId")
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("backend.Entities.User", "AssignedBy")
@@ -424,30 +387,9 @@ namespace backend.Migrations
                     b.Navigation("AssignedTo");
                 });
 
-            modelBuilder.Entity("backend.Entities.ReturningRequest", b =>
+            modelBuilder.Entity("backend.Entities.Asset", b =>
                 {
-                    b.HasOne("backend.Entities.Assignment", "Assignment")
-                        .WithOne()
-                        .HasForeignKey("backend.Entities.ReturningRequest", "AssignmentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("backend.Entities.User", "ProcessedBy")
-                        .WithMany("Processed")
-                        .HasForeignKey("ProcessedByUserId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("backend.Entities.User", "RequestedBy")
-                        .WithMany("Requests")
-                        .HasForeignKey("RequestedByUserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
-                    b.Navigation("Assignment");
-
-                    b.Navigation("ProcessedBy");
-
-                    b.Navigation("RequestedBy");
+                    b.Navigation("Assignments");
                 });
 
             modelBuilder.Entity("backend.Entities.Category", b =>
@@ -460,10 +402,6 @@ namespace backend.Migrations
                     b.Navigation("AssignedBy");
 
                     b.Navigation("AssignedTo");
-
-                    b.Navigation("Processed");
-
-                    b.Navigation("Requests");
                 });
 #pragma warning restore 612, 618
         }

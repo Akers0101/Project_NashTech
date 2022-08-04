@@ -48,7 +48,7 @@ const Login = () => {
     }
     };
 React.useEffect(() => {
-  if ( 0 < password.length && password.length < 8) {
+  if ( 0 < password.length && password.length < 2) {
     setErrMessage('Password should be 8-255 characters');
     return false;
   }
